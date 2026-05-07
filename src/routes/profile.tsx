@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Settings, Share2, Trophy, Sparkles, ShieldCheck, Crown, Compass, Flame, Star, Lock } from "lucide-react";
+import { Settings, Share2, Trophy, Sparkles, ShieldCheck, Crown, Flame } from "lucide-react";
 import { ProgressRing } from "@/components/ProgressRing";
 import { HypeBadge } from "@/components/HypeBadge";
 import { RewardUnlockModal } from "@/components/RewardUnlockModal";
+import { VaultGrid } from "@/components/VaultGrid";
 
 export const Route = createFileRoute("/profile")({
   component: ProfilePage,
@@ -166,5 +167,3 @@ function VaultPreview() {
     </div>
   );
 }
-
-import { VaultGrid } from "@/components/VaultGrid";
