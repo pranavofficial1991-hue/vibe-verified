@@ -1,13 +1,14 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Compass, User, Vault, Camera, Store } from "lucide-react";
 
-const items = [
+type NavItem = { to: string; label: string; icon: typeof Compass; primary?: boolean };
+const items: NavItem[] = [
   { to: "/", label: "Feed", icon: Compass },
   { to: "/vault", label: "Vault", icon: Vault },
   { to: "/verify", label: "Verify", icon: Camera, primary: true },
   { to: "/profile", label: "Hype", icon: User },
   { to: "/merchant", label: "Shop", icon: Store },
-] as const;
+];
 
 export function BottomNav() {
   const { pathname } = useLocation();
